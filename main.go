@@ -1,20 +1,34 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
-	// for i := 1; i <= 100; i++ {
-	// 	fmt.Println("Saya sedang belajar Go:", i)
-	// }
+	sentence := "Golang the best language"
+	for index, letter := range sentence {
+		if index%2 == 0 {
+			strLetter := string(letter)
+			fmt.Println("index:", index, "letter:", strLetter)
+		}
+	}
 
-	// i := 1
-	// for i <= 100 {
-	// 	fmt.Println("Saya sedang belajar Go:", i)
-	// 	i++
-	// }
-
-	title := "Golang the best language"
-	for index, letter := range title {
-		fmt.Println("index:", index, "letter:", string(letter))
+	fmt.Println()
+	vocalCharacters := []string{
+		"a",
+		"i",
+		"u",
+		"e",
+		"o",
+	}
+	for _, letter := range sentence {
+		strLetter := string(letter)
+		strLetterLowerCase := strings.ToLower(strLetter)
+		for _, letterVocal := range vocalCharacters {
+			if (strLetterLowerCase == letterVocal) {
+				fmt.Println(strLetter)
+			}
+		}
 	}
 }
