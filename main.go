@@ -3,27 +3,36 @@ package main
 import "fmt"
 
 func main() {
-	// if else
-	/* age := 28
-	if age > 10 {
-		fmt.Println("Boleh bermain game")
-	} else {
-		fmt.Println("Tidak boleh bermain game")
+	/* number := 2
+	switch number {
+	case 1:
+		fmt.Println("S")
+		fmt.Println("A")
+		fmt.Println("T")
+		fmt.Println("U")
+	case 2:
+		fmt.Println("D")
+		fmt.Println("U")
+		fmt.Println("A")
+	case 3:
+		fmt.Println("Tiga")
+	default:
+		fmt.Println("DEFAULT")
 	} */
 
-	// else if
-	score := 80
+	score := 88
 	var grade string
-	if score <= 50 {
+	switch {
+	case score <= 50:
 		grade = "E"
-	} else if score <= 60 {
+	case score <= 60:
 		grade = "D"
-	} else if score <= 70 {
+	case score <= 70:
 		grade = "C"
-	} else if score <= 85 {
+	case score <= 80:
 		grade = "B"
-	} else {
+	default:
 		grade = "A"
 	}
-	fmt.Println("grade:", grade)
+	fmt.Println(grade)
 }
