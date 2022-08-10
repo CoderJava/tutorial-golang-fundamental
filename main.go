@@ -3,36 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	/* number := 2
-	switch number {
-	case 1:
-		fmt.Println("S")
-		fmt.Println("A")
-		fmt.Println("T")
-		fmt.Println("U")
-	case 2:
-		fmt.Println("D")
-		fmt.Println("U")
-		fmt.Println("A")
-	case 3:
-		fmt.Println("Tiga")
-	default:
-		fmt.Println("DEFAULT")
-	} */
+	// for i := 1; i <= 100; i++ {
+	// 	fmt.Println("Saya sedang belajar Go:", i)
+	// }
 
-	score := 88
-	var grade string
-	switch {
-	case score <= 50:
-		grade = "E"
-	case score <= 60:
-		grade = "D"
-	case score <= 70:
-		grade = "C"
-	case score <= 80:
-		grade = "B"
-	default:
-		grade = "A"
+	// i := 1
+	// for i <= 100 {
+	// 	fmt.Println("Saya sedang belajar Go:", i)
+	// 	i++
+	// }
+
+	title := "Golang the best language"
+	for index, letter := range title {
+		fmt.Println("index:", index, "letter:", string(letter))
 	}
-	fmt.Println(grade)
 }
