@@ -1,14 +1,15 @@
 package main
 
-import (
-	"fmt"
-	"golang-fundamental/calculation"
-)
+import "fmt"
 
 func main() {
-	resultAdd := calculation.Add(5, 8)
-	fmt.Println("result add:", resultAdd)
+	// Cara pendeklarasian variable
+	// 1. Buat variable tanpa di-assign
+	var name string
+	name = "Pablo"
+	fmt.Println(name)
 
-	resultMultiply := calculation.Multiply(4, 4)
-	fmt.Println("result multiply:", resultMultiply)
+	// 2. Buat variable langsung di-assign
+	age := 28
+	fmt.Println(age)
 }
