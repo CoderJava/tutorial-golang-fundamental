@@ -3,11 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	sentence := printMyResult("Saya sedang")
-	fmt.Println(sentence)
+	result := add(10, 20)
+	fmt.Println(result)
 }
 
-func printMyResult(sentence string) string {
-	newSentence := sentence + " belajar Golang"
-	return newSentence
+func add(numberOne int, numberTwo int) int {
+	return numberOne + numberTwo
 }
