@@ -19,5 +19,5 @@ func calculate(panjang int, lebar int) (int, int) {
 func calculate2(panjang int, lebar int) (luas int, keliling int) {
 	luas = panjang * lebar
 	keliling = 2 * (panjang + lebar)
-	return luas, keliling
+	return
 }
