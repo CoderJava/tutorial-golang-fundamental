@@ -3,20 +3,19 @@ package main
 import "fmt"
 
 func main() {
-	var gamingConsoles []string
-	gamingConsoles = append(gamingConsoles, "PlayStation4")
-	gamingConsoles = append(gamingConsoles, "Nintendo Switch")
-	gamingConsoles = append(gamingConsoles, "Xbox One")
+	/* myMap := map[string]int{}
 
-	/* gamingConsoles := []string{
-		"PlayStation 4",
-		"Nintendo Switch",
-		"Xbox One",
-	} */
+	myMap["ruby"] = 9
+	myMap["go"] = 9
+	myMap["JavaScript"] = 8
+	myMap["go"] = 10 */
 
-	fmt.Println(gamingConsoles)
+	// fmt.Println(myMap)
+	// fmt.Println(myMap["go"])
 
-	/* for _, console := range gamingConsoles {
-		fmt.Println(console)
-	} */
+	myMap := map[string]string{
+		"ruby": "is beautiful",
+		"go": "is super fast",
+	}
+	fmt.Println(myMap)
 }
