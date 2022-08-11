@@ -3,21 +3,29 @@ package main
 import "fmt"
 
 func main() {
-	students := []map[string]string{
-		{
-			"name":  "Agung",
-			"score": "A",
-		},
-		{
-			"name":  "Link",
-			"score": "B",
-		},
-		{
-			"name":  "Mario",
-			"score": "E",
-		},
+	scores := [8]int{
+		100,
+		80,
+		75,
+		92,
+		70,
+		93,
+		88,
+		67,
 	}
-	for _, student := range students {
-		fmt.Println(student["name"], "-", student["score"])
+
+	// hitung rata-rata
+	// masukkan nilai >= 90 kedalam slice goodScores
+	average := 0.0
+	var goodScores []int
+	for _, itemScore := range scores {
+		average += float64(itemScore)
+		if (itemScore >= 90) {
+			goodScores = append(goodScores, itemScore)
+		}
 	}
+	average = average / float64(len(scores))
+	fmt.Println("average:", average)
+	fmt.Println("good scores:", goodScores)
+
 }
