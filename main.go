@@ -3,31 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	/* var languages [5]string
-	languages[0] = "Go"
-	languages[1] = "Ruby"
-	languages[2] = "JavaScript"
-	languages[3] = "C#"
-	languages[4] = "Python" */
+	var gamingConsoles []string
+	gamingConsoles = append(gamingConsoles, "PlayStation4")
+	gamingConsoles = append(gamingConsoles, "Nintendo Switch")
+	gamingConsoles = append(gamingConsoles, "Xbox One")
 
-	/* languages := [5]string{
-		"Go",
-		"Ruby",
-		"JavaScript",
-		"C#",
-		"Python",
+	/* gamingConsoles := []string{
+		"PlayStation 4",
+		"Nintendo Switch",
+		"Xbox One",
 	} */
 
-	languages := [...]string{
-		"Ruby",
-		"Python",
-		"JavaScript",
-		"Go",
-		"C#",
-		"Kotlin",
-	}
+	fmt.Println(gamingConsoles)
 
-	fmt.Println(languages)
-	length := len(languages)
-	fmt.Println(length)
+	/* for _, console := range gamingConsoles {
+		fmt.Println(console)
+	} */
 }
