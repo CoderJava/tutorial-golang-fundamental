@@ -3,33 +3,21 @@ package main
 import "fmt"
 
 func main() {
-	/* myMap := map[string]int{}
-
-	myMap["ruby"] = 9
-	myMap["go"] = 9
-	myMap["JavaScript"] = 8
-	myMap["go"] = 10 */
-
-	// fmt.Println(myMap)
-	// fmt.Println(myMap["go"])
-
-	myMap := map[string]string{
-		"ruby":       "is beautiful",
-		"go":         "is super fast",
-		"JavaScript": "hype",
+	students := []map[string]string{
+		{
+			"name":  "Agung",
+			"score": "A",
+		},
+		{
+			"name":  "Link",
+			"score": "B",
+		},
+		{
+			"name":  "Mario",
+			"score": "E",
+		},
 	}
-	for key, value := range myMap {
-		fmt.Println("Key:", key, "Value:", value)
+	for _, student := range students {
+		fmt.Println(student["name"], "-", student["score"])
 	}
-
-	fmt.Println("==================")
-
-	delete(myMap, "ruby")
-	for key, value := range myMap {
-		fmt.Println("Key:", key, "Value:", value)
-	}
-
-	value, isAvailable := myMap["python"]
-	fmt.Println(value)
-	fmt.Println(isAvailable)
 }
