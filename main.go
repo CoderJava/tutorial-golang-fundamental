@@ -20,7 +20,7 @@ func main() {
 	var goodScores []int
 	for _, itemScore := range scores {
 		average += float64(itemScore)
-		if (itemScore >= 90) {
+		if itemScore >= 90 {
 			goodScores = append(goodScores, itemScore)
 		}
 	}
