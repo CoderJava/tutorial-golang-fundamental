@@ -17,8 +17,11 @@ func main() {
 		IsActive:  false,
 	}
 	user3 := User{3, "Eka", "Pablo", "eka@gmail.com", false}
+	fmt.Println(user.display())
+	fmt.Println(user2.display())
+	fmt.Println(user3.display())
 
-	users := []User{
+	/*users := []User{
 		user,
 		user2,
 		user3,
@@ -29,7 +32,7 @@ func main() {
 		Users:       users,
 		IsAvailable: true,
 	}
-	displayGroup(group)
+	displayGroup(group)*/
 }
 
 type User struct {
@@ -45,6 +48,11 @@ type Group struct {
 	Admin       User
 	Users       []User
 	IsAvailable bool
+}
+
+func (user User) display() string {
+	output := fmt.Sprintf("Name: %s %s, Email: %s", user.FirstName, user.LastName, user.Email)
+	return output
 }
 
 // func displayUser(user User) string {
