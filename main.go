@@ -3,16 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	var numberA int = 5
-	var numberB *int = &numberA
+	number := 5
+	fmt.Println(number)
+	change(&number, 100)
+	fmt.Println(number)
+}
 
-	fmt.Println(numberA)
-	fmt.Println(numberB)
-	fmt.Println(*numberB)
-	fmt.Println("===============")
-
-	numberA = 20
-	fmt.Println(numberA)
-	fmt.Println(numberB)
-	fmt.Println(*numberB)
+func change(old *int, new int) {
+	*old = new
+	fmt.Println("didalam function:", *old)
 }
