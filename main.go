@@ -21,7 +21,7 @@ func main() {
 	fmt.Println(user2.display())
 	fmt.Println(user3.display())
 
-	/*users := []User{
+	users := []User{
 		user,
 		user2,
 		user3,
@@ -32,7 +32,7 @@ func main() {
 		Users:       users,
 		IsAvailable: true,
 	}
-	displayGroup(group)*/
+	group.display()
 }
 
 type User struct {
@@ -55,12 +55,7 @@ func (user User) display() string {
 	return output
 }
 
-// func displayUser(user User) string {
-// 	output := fmt.Sprintf("Name: %s %s, Email: %s", user.FirstName, user.LastName, user.Email)
-// 	return output
-// }
-
-func displayGroup(group Group) {
+func (group Group) display() {
 	fmt.Printf("Name: %s", group.Name)
 	fmt.Println()
 	fmt.Printf("Member count: %d", len(group.Users))
@@ -70,3 +65,19 @@ func displayGroup(group Group) {
 		fmt.Println(user.FirstName)
 	}
 }
+
+// func displayUser(user User) string {
+// 	output := fmt.Sprintf("Name: %s %s, Email: %s", user.FirstName, user.LastName, user.Email)
+// 	return output
+// }
+
+/* func displayGroup(group Group) {
+	fmt.Printf("Name: %s", group.Name)
+	fmt.Println()
+	fmt.Printf("Member count: %d", len(group.Users))
+	fmt.Println()
+
+	for _, user := range group.Users {
+		fmt.Println(user.FirstName)
+	}
+} */
