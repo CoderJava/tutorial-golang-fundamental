@@ -1,45 +1,21 @@
 package main
 
-import (
-	"fmt"
-	"golang-fundamental/management"
-)
+import "fmt"
 
 func main() {
-	user := management.User{}
-	user.ID = 1
-	user.FirstName = "Yudi"
-	user.LastName = "Setiawan"
-	user.Email = "kolonel.yudisetiawan@gmail.com"
-	user.IsActive = true
-	user2 := management.User{
-		ID:        2,
-		FirstName: "Link",
-		LastName:  "Awakening",
-		Email:     "link@nintendo.com",
-		IsActive:  false,
-	}
-	user3 := management.User{
-		ID:        3,
-		FirstName: "Eka",
-		LastName:  "Pablo",
-		Email:     "eka@gmail.com",
-		IsActive:  false,
-	}
-	fmt.Println(user.Display())
-	fmt.Println(user2.Display())
-	fmt.Println(user3.Display())
+	numberA := 5
+	numberB := &numberA // reference
+	numberC := *numberB // dereference
 
-	users := []management.User{
-		user,
-		user2,
-		user3,
-	}
-	group := management.Group{
-		Name:        "Gamer",
-		Admin:       user,
-		Users:       users,
-		IsAvailable: true,
-	}
-	group.Display()
+	fmt.Println(numberA)
+	fmt.Println(numberB)
+	fmt.Println(*numberB)
+	fmt.Println(numberC)
+	fmt.Println("====================")
+
+	*numberB = 10
+	fmt.Println(numberA)
+	fmt.Println(numberB)
+	fmt.Println(*numberB)
+	fmt.Println(numberC)
 }
