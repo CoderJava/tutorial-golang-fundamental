@@ -20,12 +20,12 @@ func main() {
 
 	user3 := User{3, "Eka", "Pablo", "eka@gmail.com", false}
 
-	fmt.Println(user)
-	fmt.Println(user.FirstName)
-	fmt.Println(user2)
-	fmt.Println(user2.FirstName)
-	fmt.Println(user3)
-	fmt.Println(user3.FirstName)
+	resultUser1 := displayUser(user)
+	resultUser2 := displayUser(user2)
+	resultUser3 := displayUser(user3)
+	fmt.Println(resultUser1)
+	fmt.Println(resultUser2)
+	fmt.Println(resultUser3)
 }
 
 type User struct {
@@ -34,4 +34,9 @@ type User struct {
 	LastName  string
 	Email     string
 	IsActive  bool
+}
+
+func displayUser(user User) string {
+	result := fmt.Sprintf("Name: %s %s, Email: %s", user.FirstName, user.LastName, user.Email)
+	return result
 }
