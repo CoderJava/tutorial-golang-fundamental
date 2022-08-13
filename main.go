@@ -3,31 +3,25 @@ package main
 import "fmt"
 
 func main() {
-	student := Student{
-		ID:   1,
-		Name: "Agung Setiawan",
-		GPA:  3.7,
+	gamer := Gamer{
+		Name:  "Yudi Setiawan",
+		Games: []string{},
 	}
-	var student2 *Student = &Student{
-		ID:   2,
-		Name: "Eko Kurniawan",
-		GPA:  3.8,
+	gamer.AddGame("Tekken 7")
+	gamer.AddGame("Fifa 2022")
+	gamer.AddGame("The last of us")
+	gamer.AddGame("The last of us part 2")
+
+	for _, game := range gamer.Games {
+		fmt.Println(game)
 	}
-	fmt.Println(student.Name)
-	student.graduate()
-	fmt.Println(student.Name)
-	fmt.Println("====================")
-	fmt.Println(student2.Name)
-	student2.graduate()
-	fmt.Println(student2.Name)
 }
 
-type Student struct {
-	ID   int
-	Name string
-	GPA  float32
+func (gamer *Gamer) AddGame(game string) {
+	gamer.Games = append(gamer.Games, game)
 }
 
-func (student *Student) graduate() {
-	student.Name = student.Name + " S.T"
+type Gamer struct {
+	Name  string
+	Games []string
 }
