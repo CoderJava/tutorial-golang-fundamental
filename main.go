@@ -10,25 +10,19 @@ func main() {
 		Panjang: 6,
 		Lebar:   5,
 	}
-	luasPersegi := SeberapaLuas1(persegi)
-	luasPersegiPanjang := SeberapaLuas2(persegiPanjang)
+	luasPersegi := SeberapaLuas(persegi)
+	luasPersegiPanjang := SeberapaLuas(persegiPanjang)
 	fmt.Println("luas persegi:", luasPersegi)
 	fmt.Println("luas persegi panjang:", luasPersegiPanjang)
 }
 
-// Masalah jika tidak pakai interface maka, kita harus membuat satu persatu function SeberapaLuas sesuai
-// dengan parameteter struct-nya masing-masing.
-func SeberapaLuas1(persegi Persegi) int {
-	return persegi.Sisi
+func SeberapaLuas(bangunDatar BangunDatar) int {
+	return bangunDatar.HitungLuas()
 }
 
-func SeberapaLuas2(persegiPanjang PersegiPanjang) int {
-	return persegiPanjang.HitungLuas()
+type BangunDatar interface {
+	HitungLuas() int
 }
-
-// type Luas interface {
-// 	HitungLuas() int
-// }
 
 type Persegi struct {
 	Sisi int
